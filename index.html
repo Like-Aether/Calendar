@@ -153,13 +153,13 @@
       </div>
       <div class="calendar-grid" id="calendar-grid">
         <!-- 요일 헤더 -->
-        <div class="day">Sun</div>
+        <div class="day" style="color: #007bff;">Sun</div>
         <div class="day">Mon</div>
         <div class="day">Tuw</div>
         <div class="day">Wen</div>
         <div class="day">Thu</div>
         <div class="day">Fri</div>
-        <div class="day">Sat</div>
+        <div class="day" style="color: red;">Sat</div>
         <!-- 날짜 셀은 JavaScript로 동적으로 생성 -->
       </div>
     </div>
@@ -428,7 +428,7 @@
           });
         } else {
           const li = document.createElement("li");
-          li.textContent = "메모가 없습니다";
+          li.textContent = "None";
           memoListEl.appendChild(li);
         }
       }
