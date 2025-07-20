@@ -272,7 +272,7 @@
       const repeatInput = document.getElementById("repeat-input");
       const colorPicker = document.getElementById("color-picker");
       const colorOptions = document.getElementById("color-options");
-
+      
       /***********************
        * 날짜 문자열에 일수 더하기 (YYYY-MM-DD 형식)
        ***********************/
@@ -351,7 +351,11 @@
           nextDay++;
           cellCount++;
         }
-        monthYearEl.textContent = `${year}년 ${month + 1}월`;
+        const monthNames = [
+          "January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"
+        ];
+        monthYearEl.textContent = `${monthNames[month]} ${year}`;
       }
 
       /***********************
@@ -628,7 +632,11 @@
             renderCalendar(currentMonth, currentYear);
           }
         }
-        monthYearEl.textContent = `${currentYear}년 ${currentMonth + 1}월`;
+        const monthNames = [
+          "January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"
+        ];
+        monthYearEl.textContent = `${monthNames[currentMonth]} ${currentYear}`;
       }
 
       /***********************
