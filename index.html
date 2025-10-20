@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Calendar</title>
     <style>
-      /* 공통 스타일 */
+      /* 배경 스타일 */
       body {
         font-family: Arial, sans-serif;
         margin: 20px;
         padding: 20px;
         background-color: #f0f0f0;
       }
+      /* 버튼 스타일 */
       button {
         background-color: #007bff;
         color: #fff;
@@ -24,7 +25,7 @@
         background-color: #0056b3;
       }
       
-      /* 캘린더 스타일 */
+      /* 캘린더 배경 스타일 */
       .calendar {
         max-width: 400px;
         margin: 0 auto;
@@ -33,17 +34,20 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
+      /* 헤더 (SUN MON etc.) 스타일 */
       .calendar-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 10px;
       }
+      /* 그리드 (표) 스타일 */
       .calendar-grid {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         gap: 5px;
       }
+      /* 날짜 셀 스타일 */
       .day {
         width: 100%;
         height: 50px;
@@ -55,9 +59,11 @@
         border-radius: 5px;
         cursor: pointer;
       }
+      /* 앞&뒤 달 스타일*/
       .other-month {
         color: #bbb;
       }
+      /* 오늘 날짜 강조 스타일 */
       .today {
         background-color: #007bff;
         color: #fff;
@@ -77,6 +83,7 @@
       #memo-view h3 {
         margin-top: 0;
       }
+      /* 메모 리스트 스타일 */
       #memo-list {
         list-style: none;
         padding: 0;
@@ -185,12 +192,14 @@
             placeholder="repeat interval"
             style="width: 60px; display: none;"
           />
+          <!-- 색상 선택 아이콘-->
           <span
             id="color-picker"
             title="Choose memo color"
             style="cursor: pointer; margin-left: 10px;"
             >🎨</span
           >
+          <!-- 색상 팔레트-->
           <div id="color-options" style="display: none;">
             <span
               class="color-option"
